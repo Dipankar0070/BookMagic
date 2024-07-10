@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "name": "History",
+    "Title": "Exploring The Past Worlds",
+    "Price": 800,
+    "Category": "Free",
+    "image":"history.jpg"
+},
+{
+    "id": 2,
+    "name": "Biography",
+    "Title": "Lives That Inspire",
+    "Price": 900,
+    "Category": "Free",
+    "image": "biography.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Religion",
+    "Title": "Faith and Spiritual Journeys",
+    "Price": 650,
+    "Category": "Free",
+    "image": "religion.png"
+  },
+
+  {
+    "id": 4,
+    "name": "Poetry",
+    "Title": "Verses of the Heart",
+    "Price": 7000,
+    "Category": "Paid",
+    "image": "poetry.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Children",
+    "Title": "Adventures for Young Minds",
+    "Price": 250,
+    "Category": "Paid",
+    "image": "child.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Mystery",
+    "Title": "Unraveling the Unknown",
+    "Price": 800,
+    "Category": "Free",
+    "image": "mystery.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Fantasy",
+    "Title": "Worlds of Wonder and Magic",
+    "Price": 550,
+    "Category": "Paid",
+    "image": "fantasy.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Science",
+    "Title": "Unlocking the Mysteries of Nature",
+    "Price": 1200,
+    "Category": "Free",
+    "image": "science.jpg"
+  },
+  
+  {
+    "id": 9,
+    "name": "Philosophy",
+    "Title": "Exploring Life's Big Questions",
+    "Price": 1000,
+    "Category": "Paid",
+    "image": "philosophy.png"
+  }
+]
