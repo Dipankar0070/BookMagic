@@ -1,6 +1,17 @@
 import React from "react";
 import book_image from "../../public/book_image.jpg";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
+
+
 function Banner() {
+
+  const location=useLocation();
+  const navigate=useNavigate();
+  const from=location.state?.from?.pathname || "/Signup"
+  const handleNavigate = () => {
+    navigate(from, { replace: true });
+  };
   return (
     <>
       <div className="max-w-screen-2xl container mx-auto md:px-20 py-24 flex flex-col md:flex-row mb-10 ">
@@ -47,9 +58,13 @@ function Banner() {
               </div>
 
               <div className="w-0.5/4">
-                <button className=" custom-font bg-teal-300 text-black px-3 py-2 rounded-md hover:bg-lime-500 hover:text-white duration-300 cursor-pointer ">
+                <button className=" custom-font bg-teal-300 text-black px-3 py-2 rounded-md hover:bg-lime-500 hover:text-white duration-300 cursor-pointer "
+                onClick={handleNavigate}
+>
                   Start
+                  
                 </button>
+               
               </div>
             </div>
           </div>

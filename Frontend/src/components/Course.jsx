@@ -1,8 +1,23 @@
-import React from "react";
-import Card from "../../public/Card.json";
+import React, { useEffect, useState } from "react";
+//import Card from "../../public/Card.json";
 import Cardss from "./Cardss";
-import {Link} from "react-router-dom";
+import axios from "axios";
+import {Link } from "react-router-dom";
 function Course() {
+  const [book, setBook] = useState([]);
+  useEffect(() => {
+    const getBook = async () => {
+      try {
+     const res=   await axios.get("http://localhost:4001/book");
+   console.log(res.data)
+   setBook(res.data)
+    } catch (error) {
+      console.log(error)
+    }
+
+    };
+    getBook();
+  }, []);
   return (
     <>
       <div className="max-w-screen-2xl container mx-auto md:px-20 py-4">
@@ -24,21 +39,20 @@ function Course() {
             generations, and realities, fostering understanding and sparking
             curiosity in the hearts of readers everywhere."
           </p>
-          
         </div>
 
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3">
-          {Card.map((item) => (
+          {book.map((item) => (
             <Cardss key={item.id} item={item} />
           ))}
         </div>
-          <div className="item-center text-center justify-center mt-4 mb-4">
-        <Link to="/">
+        <div className="item-center text-center justify-center mt-4 mb-4">
+          <Link to="/">
             <button className=" custom-font bg-teal-300  text-black px-3 py-1.5 rounded-md mt-4 hover:bg-lime-500 hover:text-white duration-300 cursor-pointer ">
               Back
             </button>
           </Link>
-          </div>
+        </div>
       </div>
     </>
   );
